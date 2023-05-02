@@ -1,5 +1,5 @@
 import { Box, Button, Divider, Flex, Heading, HStack, SimpleGrid, VStack } from "@chakra-ui/react";
-import { SubmitHandler, useForm } from 'react-hook-form'
+import { FieldError, SubmitHandler, useForm } from 'react-hook-form'
 import * as yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup'
 import Link from "next/link";
@@ -80,14 +80,13 @@ export default function CreateUser() {
               <Input
                 name="name"
                 label="Nome completo"
-                error={errors.name}
-                {...register('name')}
+                error={{ type: 'erro', message: 'erro' } as FieldError}
               />
               <Input
                 name="email"
                 type="email"
                 label="E-mail"
-                error={errors.email}
+                error={{ type: 'erro', message: 'erro' } as FieldError}
                 {...register('email')}
               />
             </SimpleGrid>
@@ -97,14 +96,14 @@ export default function CreateUser() {
                 name="password"
                 type="password"
                 label="Senha"
-                error={errors.password}
+                error={{ type: 'erro', message: 'erro' } as FieldError}
                 {...register('password')}
               />
               <Input
                 name="password_confirmation"
                 type="password"
                 label="Confirmação da senha"
-                error={errors.password_confirmation}
+                error={{ type: 'erro', message: 'erro' } as FieldError}
                 {...register('password_confirmation')}
               />
             </SimpleGrid>
