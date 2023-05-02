@@ -27,7 +27,11 @@ const options = {
     enabled: false,
   },
   xaxis: {
-    type: 'datetime',
+    labels: {
+      formatter: function(val, timestamp) {
+        return new Date(val).toLocaleDateString()
+      },
+    },
     axisBorder: {
       color: theme.colors.gray[600]
     },
