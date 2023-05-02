@@ -2,6 +2,7 @@ import { Flex, Button, Stack } from '@chakra-ui/react'
 import { SubmitHandler, useForm } from 'react-hook-form'
 import * as yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup'
+import { FieldError } from 'react-hook-form'
 
 import { Input } from '../components/Form/Input'
 
@@ -50,14 +51,14 @@ export default function SignIn() {
             name="email" 
             type="email" 
             label="E-mail" 
-            error={errors.email}
+            error={{ type: 'erro', message: 'erro' } as FieldError}
             {...register('email')}
           />
           <Input 
             name="password" 
             type="password" 
             label="Senha" 
-            error={errors.password}
+            error={{ type: 'erro', message: 'erro' } as FieldError}
             {...register('password')}
           />
         </Stack>
