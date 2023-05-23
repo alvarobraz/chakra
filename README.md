@@ -50,10 +50,6 @@ As seguintes tecnologias foram utilizadas no projeto:
 - [chakra](https://chakra-ui.com/)
 - [miragejs](https://miragejs.com/)
 - [react-query](https://www.npmjs.com/package/react-query)
-- [zzzzzz](xxxxxxxxxx)]
-- [zzzzzz](xxxxxxxxxx)
-
-
 
 ## Estrutura ##
 ```
